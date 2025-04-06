@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coupon Deals - Homepage</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #222;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    header {
+      background: #ff4d4d;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .hero-banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .coupon-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .coupon-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .coupon-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .coupon-content {
+      padding: 20px;
+    }
+
+    .coupon-title {
+      font-size: 1.3rem;
+      margin: 10px 0;
+      color: #222;
+    }
+
+    .coupon-description {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+
+    .coupon-code {
+      font-weight: bold;
+      background: #f3f3f3;
+      border: 1px dashed #888;
+      padding: 8px 16px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .copy-btn {
+      background-color: #ff4d4d;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .copy-btn:hover {
+      background-color: #e63e3e;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">CouponHub</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Deals</a></li>
+      <li><a href="#">Categories</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>ðŸ”¥ Today's Best Coupon Codes</h1>
+  </header>
+
+  <!-- Hero Banner -->
+  <div class="hero-banner">
+    <img src="https://d3pzq99hz695o4.cloudfront.net/sitespecific/in/banner/web/ff0db50cdf080c3fbf74d1a5c318280f/banner_home-580x1160.webp?452417" alt="Main Banner" />
+  </div>
+
+  <!-- Coupon Cards -->
+  <div class="container">
+    <div class="grid">
+      <!-- Coupon 1 -->
+      <div class="coupon-card">
+        <img src="https://d3pzq99hz695o4.cloudfront.net/sitespecific/in/stores/web/4022b70285e468ff98d01073c52038b8/flipkart-logo-large.jpg?126153" alt="Coupon 1">
+        <div class="coupon-content">
+          <div class="coupon-title">50% Off Storewide</div>
+          <div class="coupon-description">Use this code to get 50% off on all items.</div>
+          <div class="coupon-code" id="code1">SAVE50</div>
+          <br>
+          <button class="copy-btn" onclick="copyCode('code1')">Copy Code</button>
+        </div>
+      </div>
+
+      <!-- Coupon 2 -->
+      <div class="coupon-card">
+        <img src="https://d3pzq99hz695o4.cloudfront.net/sitespecific/in/stores/web/4763d1d29415df742a808c52e765a098/myntra-logo-large.jpg?506948" alt="Coupon 2">
+        <div class="coupon-content">
+          <div class="coupon-title">Buy 1 Get 1 Free</div>
+          <div class="coupon-description">BOGO offer valid for selected items only.</div>
+          <div class="coupon-code" id="code2">BOGO2025</div>
+          <br>
+          <button class="copy-btn" onclick="copyCode('code2')">Copy Code</button>
+        </div>
+      </div>
+
+      <!-- Coupon 3 -->
+      <div class="coupon-card">
+        <img src="https://d3pzq99hz695o4.cloudfront.net/sitespecific/in/stores/web/9ffe4a7a7970e2d853ea7f9dbce75627/ajio-logo-large.jpg?294922" alt="Coupon 3">
+        <div class="coupon-content">
+          <div class="coupon-title">Free Shipping</div>
+          <div class="coupon-description">Enjoy free delivery on orders over $50.</div>
+          <div class="coupon-code" id="code3">FREESHIP</div>
+          <br>
+          <button class="copy-btn" onclick="copyCode('code3')">Copy Code</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 CouponHub. All rights reserved.
+  </footer>
+
+  <!-- Script -->
+  <script>
+    function copyCode(codeId) {
+      const codeText = document.getElementById(codeId).innerText;
+      navigator.clipboard.writeText(codeText).then(() => {
+        alert("Coupon code copied: " + codeText);
+      });
+    }
+  </script>
+
+</body>
+</html>

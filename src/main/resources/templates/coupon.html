@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CouponDunia - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #ffffff;
+      padding: 15px 40px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: #e65925;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+    .hero {
+      background: linear-gradient(to right, #ffe4d2, #fff);
+      padding: 60px 40px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 18px;
+      color: #666;
+    }
+    .store-section {
+      padding: 40px;
+    }
+    .store-section h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .store-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 20px;
+    }
+    .store-card {
+      background: #fff;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+    .store-card:hover {
+      transform: scale(1.05);
+    }
+    .store-card img {
+      max-width: 100%;
+      height: 50px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+    .store-card span {
+      font-size: 14px;
+      font-weight: 600;
+      color: #333;
+    }
+    footer {
+      background-color: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">CouponDunia</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Top Stores</a>
+      <a href="#">Categories</a>
+      <a href="#">Login</a>
+      <a href="#">Sign Up</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Get Coupons & Cashback on Online Shopping</h1>
+    <p>Find verified coupons from top stores like Amazon, Flipkart, Myntra, and more</p>
+  </section>
+
+  <section class="store-section">
+    <h2>Top Stores</h2>
+    <div class="store-grid">
+      <div class="store-card">
+        <img src="https://cdn.coupondunia.in/assets/store/amazon-logo.png" alt="Amazon" />
+        <span>Amazon</span>
+      </div>
+      <div class="store-card">
+        <img src="https://cdn.coupondunia.in/assets/store/flipkart-logo.png" alt="Flipkart" />
+        <span>Flipkart</span>
+      </div>
+      <div class="store-card">
+        <img src="https://cdn.coupondunia.in/assets/store/myntra-logo.png" alt="Myntra" />
+        <span>Myntra</span>
+      </div>
+      <div class="store-card">
+        <img src="https://cdn.coupondunia.in/assets/store/ajio-logo.png" alt="Ajio" />
+        <span>Ajio</span>
+      </div>
+      <!-- Add more store cards if needed -->
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 CouponDunia. All rights reserved.
+  </footer>
+
+</body>
+</html>
