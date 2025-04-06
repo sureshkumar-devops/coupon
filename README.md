@@ -1,5 +1,6 @@
 # Devops-Project.
 
+![DevOps-Project-1](https://github.com/user-attachments/assets/7e203a16-0d1c-44e8-8127-edb50ae4d36d)
 
 
 This repository contains the following components:
