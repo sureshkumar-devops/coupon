@@ -16,11 +16,15 @@ public class CouponApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(CouponApplication.class, args);
 	}
-    @RequestMapping("/")
+    @GetMapping(value = "/index")
     public String index()
     {
         return "coupon";
     }
+    @GetMapping(value = "/coupon")
+     public String coupon() {
+         return "coupon";
+      }    
 
 
 }
