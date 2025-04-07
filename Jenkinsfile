@@ -107,6 +107,13 @@ pipeline
             steps
             {
                 sh 'docker run -d --name coupon-v${BUILD_NUMBER} -p 8088:8080 lehardocker/coupon:latest'
+            }        
+        }
+        stage("Deploy into Tomcat Server")
+        {
+            steps
+            {
+              deploy adapters: [tomcat9(url: 'http://localhost:8090/',credentialsId: 'tomcat-user')],war: 'target/*.war',contextPath: '/coupon'
             }
         }
     }
