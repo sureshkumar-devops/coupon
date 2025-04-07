@@ -4,19 +4,18 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @SpringBootApplication
 @RestController
 public class CouponApplication {
 
-    @GetMapping
-    public String message() {
-        return "Welcome to DevOps";
-     }   
+      
 	public static void main(String[] args) {
 		SpringApplication.run(CouponApplication.class, args);
 	}
-    @GetMapping
+    
+    @RequestMapping("/")
     public String index()
     {
         return "index";
