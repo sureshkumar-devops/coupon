@@ -113,7 +113,7 @@ pipeline
         {
             steps
             {
-              deploy adapters: [tomcat9(url: 'http://localhost:8090/',credentialsId: 'tomcat-user')],war: 'target/*.war',contextPath: '/coupon'
+              deploy adapters: [tomcat9(url: 'http://localhost:8090/',credentialsId: 'tomcat-user')],war: 'target/*.jar',contextPath: '/coupon'
             }
         }
     }
