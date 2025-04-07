@@ -4,5 +4,5 @@ USER couponuser
 WORKDIR /couponapp
 COPY /target/coupon-0.0.1-SNAPSHOT.war /couponapp/coupon-0.0.1-SNAPSHOT.war
 EXPOSE 8080
-CMD [ "java", "-jar", "/couponapp/.war" ]
+CMD [ "java", "-jar", "/couponapp/coupon-0.0.1-SNAPSHOT.war" ]
 
