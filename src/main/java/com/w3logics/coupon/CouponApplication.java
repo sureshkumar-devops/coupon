@@ -18,6 +18,6 @@ public class CouponApplication {
     @RequestMapping("/")
     public String index()
     {
-        return "index";
+        return "index.html";
     }
 }
