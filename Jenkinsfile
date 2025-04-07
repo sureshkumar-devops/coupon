@@ -106,14 +106,7 @@ pipeline
         {
             steps
             {
-                script
-                {
-                    withDockerContainer(image: 'lehardocker/coupon:latest', toolName: 'DOCKER_HOME') 
-                    {
-                        sh 'docker run -d --name coupon-v${BUILD_NUMBER} -p 8088:8080 lehardocker/coupon:latest'
-                    }
-                }
-                
+                sh 'docker run -d --name coupon-v${BUILD_NUMBER} -p 8088:8080 lehardocker/coupon:latest'
             }
         }
     }
