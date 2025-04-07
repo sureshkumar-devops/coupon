@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CouponApplication {
 
-	   @GetMapping(value = "/index")
-    public String index() {
-        return "index";
+	@GetMapping
+    public String message() {
+        return "Welcome to DevOps";
      }   
 	public static void main(String[] args) {
 		SpringApplication.run(CouponApplication.class, args);
