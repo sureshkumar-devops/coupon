@@ -23,7 +23,7 @@ pipeline
         {
             steps
             {
-                git branch:'main', url:'https://github.com/sureshkumar-devops/coupon.git'                
+                git branch:'master', url:'https://github.com/sureshkumar-devops/coupon.git'                
             }
         }
         stage('Code Compile')
