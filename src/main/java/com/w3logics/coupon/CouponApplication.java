@@ -9,12 +9,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CouponApplication {
 
-	@GetMapping
+    @GetMapping
     public String message() {
         return "Welcome to DevOps";
      }   
 	public static void main(String[] args) {
 		SpringApplication.run(CouponApplication.class, args);
 	}
+    @RequestMapping("/")
+    public String index()
+    {
+        return "index";
+    }
+
 
 }
