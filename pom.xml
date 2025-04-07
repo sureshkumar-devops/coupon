@@ -11,7 +11,7 @@
 	<groupId>com.w3logics</groupId>
 	<artifactId>coupon</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	<name>coupon</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
