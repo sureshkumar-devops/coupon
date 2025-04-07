@@ -120,7 +120,10 @@ pipeline
     post
     {
         always
-        { echo "This Section always run." }
+        { 
+            echo "This Section always run." 
+            junit '**/target/surefire-reports/*.xml'
+        }
         success
         { echo "Jenkins Pipeline Status: SUCCESSFUL" }
         failure
